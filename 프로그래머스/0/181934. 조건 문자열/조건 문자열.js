@@ -1,0 +1,13 @@
+function solution(ineq, eq, n, m) {
+    let result = false;
+
+    if (ineq === '>') {
+        if (eq === '=') result = n >= m;
+        else result = n > m;
+    } else { 
+        if (eq === '=') result = n <= m;
+        else result = n < m;
+    }
+
+    return result ? 1 : 0;
+}
