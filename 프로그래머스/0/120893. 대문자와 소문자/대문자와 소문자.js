@@ -2,12 +2,10 @@ function solution(my_string) {
     let answer = '';
 
     for (let i = 0; i < my_string.length; i++) {
-        const ch = my_string[i];
-
-        if (ch >= 'a' && ch <= 'z') {
-            answer += ch.toUpperCase();
+        if (my_string[i] === my_string[i].toLowerCase()) {
+            answer += my_string[i].toUpperCase();
         } else {
-            answer += ch.toLowerCase();
+            answer += my_string[i].toLowerCase();
         }
     }
 
