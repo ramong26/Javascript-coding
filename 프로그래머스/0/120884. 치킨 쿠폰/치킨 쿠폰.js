@@ -1,14 +1,17 @@
 function solution(chicken) {
-    let answer = 0;
-    let coupon = chicken;
-    let restCoupon = 0;
     
-    while (coupon >= 10) {             
-        chicken = Math.floor(coupon / 10);
-        restCoupon = coupon % 10;
-        coupon = chicken + restCoupon;  
-        answer = answer + chicken;
+    let coupon = 0;
+    while(chicken > 10){
+        
+        // console.log(chicken)
+        coupon = coupon + chicken / 10
+        console.log(coupon)
+        if(coupon >= 10) {
+            coupon = coupon + coupon / 10
+            console.log(coupon)
+        }
+        chicken = chicken / 10
     }
-    
-    return answer;
+        
+    return coupon
 }
